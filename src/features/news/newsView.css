@@ -1,0 +1,17 @@
+.newsList li {
+  list-style-type: none;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 2px solid rgb(92, 91, 91);
+  border-radius: 5px;
+  background-color: rgb(92, 91, 91);
+  color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

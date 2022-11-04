@@ -3,6 +3,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import React from "react";
 
+
+
 const initialState = {
   loading: false,
   posts: [],
@@ -13,9 +15,9 @@ const front = "https://newsapi.org/v2/top-headlines/sources?";
 const apiKey = "apiKey=03040e2bb8f04361beda92c70cfb1db5";
 
 // Generates pending, fulfilled and rejected action types
-export const fetchPosts = createAsyncThunk("news/fetchPosts", () => {
+export const fetchPosts = createAsyncThunk("news/fetchPosts", (category) => {
   //const category = useSelector((state) => state.menu.category);
-  const category = "";
+  //const category = "";
   const completeUrl = front + category + apiKey;
   console.log(completeUrl);
   return axios.get(completeUrl).then((res) => res.data.sources);
